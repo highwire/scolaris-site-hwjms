@@ -1,0 +1,21 @@
+uuid: b6fb9b27-aa44-4496-b43e-02f28325855f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.issue_is_open
+    - node.type.relationship
+id: node.relationship.issue_is_open
+field_name: issue_is_open
+entity_type: node
+bundle: relationship
+label: issue-is-open
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

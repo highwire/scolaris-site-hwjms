@@ -1,0 +1,12 @@
+uuid: d5fadb63-2f92-41a3-9b0b-0652eb8515ae
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ZY_OFkp--57m6TwMPwPVBFsA_4lIGY4L_Scu9xzzgT0
+id: contributors
+label: Contributors
+profile_id: contribs
+configuration: {  }
+dw_logging: null
+exists_field: ''

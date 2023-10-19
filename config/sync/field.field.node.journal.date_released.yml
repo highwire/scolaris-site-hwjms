@@ -1,0 +1,21 @@
+uuid: a5c0a020-294f-4d86-81ed-0650ba909b19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.date_released
+    - node.type.journal
+  module:
+    - datetime
+id: node.journal.date_released
+field_name: date_released
+entity_type: node
+bundle: journal
+label: date-released
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,20 @@
+uuid: b9bd27b7-d022-44ca-bf03-a7759c9c29f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - node
+id: node.date_ppub
+field_name: date_ppub
+entity_type: node
+type: daterange
+settings:
+  datetime_type: datetime
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

@@ -1,0 +1,19 @@
+uuid: 642b6a9a-34e2-4445-a7c9-dc41e83885c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.pisa_version
+field_name: pisa_version
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

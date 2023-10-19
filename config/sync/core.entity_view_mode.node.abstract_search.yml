@@ -1,0 +1,12 @@
+uuid: 877eb466-e85b-44bd-a79a-5e3a83b78f5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: P0hXsRmXuEQhSWAY7w2TVFmOSQkPcqrK82qDmbXeeZg
+id: node.abstract_search
+label: 'Abstract Search'
+targetEntityType: node
+cache: true

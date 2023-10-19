@@ -1,0 +1,21 @@
+uuid: f143e534-d0a7-4a76-abae-bead022fcd52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.date_epub_ppub
+    - node.type.journal_issue
+  module:
+    - datetime_range
+id: node.journal_issue.date_epub_ppub
+field_name: date_epub_ppub
+entity_type: node
+bundle: journal_issue
+label: date-epub-ppub
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

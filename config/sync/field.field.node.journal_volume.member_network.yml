@@ -1,0 +1,21 @@
+uuid: 17405219-58a4-48e3-8c42-9b38ba581c76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.member_network
+    - node.type.journal_volume
+  module:
+    - text
+id: node.journal_volume.member_network
+field_name: member_network
+entity_type: node
+bundle: journal_volume
+label: member-network
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

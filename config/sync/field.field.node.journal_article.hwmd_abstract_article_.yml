@@ -1,0 +1,26 @@
+uuid: fc87a17c-fb8b-4555-bffb-0b8219fb058a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.hwmd_abstract_article_
+    - node.type.journal_article
+  module:
+    - highwire_markup_display
+third_party_settings:
+  highwire_markup_display:
+    markup_display_id: abstract_article_
+_core:
+  default_config_hash: frOqWuViXqYVrEcVc58O3VEf6fROF-GHv8HffVLklYc
+id: node.journal_article.hwmd_abstract_article_
+field_name: hwmd_abstract_article_
+entity_type: node
+bundle: journal_article
+label: 'HighWire Markup Display - Abstract (Article)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: HWMarkupDisplay
