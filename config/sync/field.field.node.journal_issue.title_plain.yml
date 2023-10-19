@@ -1,0 +1,21 @@
+uuid: 75f90a7f-7a1e-4544-9b76-56e5020c02da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.title_plain
+    - node.type.journal_issue
+  module:
+    - text
+id: node.journal_issue.title_plain
+field_name: title_plain
+entity_type: node
+bundle: journal_issue
+label: title-plain
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

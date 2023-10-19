@@ -1,0 +1,21 @@
+uuid: 3352a3dd-ce97-42c0-b916-845443e625a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.next_atom
+    - node.type.journal_article
+id: node.journal_article.next_atom
+field_name: next_atom
+entity_type: node
+bundle: journal_article
+label: next-atom
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

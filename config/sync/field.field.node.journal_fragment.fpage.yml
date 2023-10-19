@@ -1,0 +1,21 @@
+uuid: db2d66b5-c03f-4084-8559-87e6aece0f0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.fpage
+    - node.type.journal_fragment
+  module:
+    - text
+id: node.journal_fragment.fpage
+field_name: fpage
+entity_type: node
+bundle: journal_fragment
+label: fpage
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

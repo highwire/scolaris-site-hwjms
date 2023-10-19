@@ -1,0 +1,19 @@
+uuid: af4cd417-0c57-4428-b49c-fcc9483b9b64
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.pubmed_id
+field_name: pubmed_id
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

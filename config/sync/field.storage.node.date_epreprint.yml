@@ -1,0 +1,20 @@
+uuid: bbd7c8b5-59ba-4cd9-b1bd-8a9aadcc51ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - node
+id: node.date_epreprint
+field_name: date_epreprint
+entity_type: node
+type: daterange
+settings:
+  datetime_type: datetime
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

@@ -1,0 +1,21 @@
+uuid: a134a763-e96e-41e9-adbd-f2f51553d397
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.has_tables
+    - node.type.journal
+id: node.journal.has_tables
+field_name: has_tables
+entity_type: node
+bundle: journal
+label: has-tables
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

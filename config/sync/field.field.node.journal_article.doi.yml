@@ -1,0 +1,21 @@
+uuid: 6426c3c6-2c85-413c-b095-fa251f33a93d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.doi
+    - node.type.journal_article
+  module:
+    - text
+id: node.journal_article.doi
+field_name: doi
+entity_type: node
+bundle: journal_article
+label: doi
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

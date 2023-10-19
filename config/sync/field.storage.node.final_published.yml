@@ -1,0 +1,20 @@
+uuid: 6bbd3293-e97b-4fa4-9faf-782a26965722
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - node
+id: node.final_published
+field_name: final_published
+entity_type: node
+type: daterange
+settings:
+  datetime_type: datetime
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

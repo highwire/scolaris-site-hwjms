@@ -1,0 +1,21 @@
+uuid: 154e1910-c1ac-484d-8991-470ab44f9ba9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.parent_journal
+    - node.type.journal
+id: node.journal.parent_journal
+field_name: parent_journal
+entity_type: node
+bundle: journal
+label: parent-journal
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

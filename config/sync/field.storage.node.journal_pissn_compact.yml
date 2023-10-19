@@ -1,0 +1,19 @@
+uuid: fe685df0-5144-4c06-ab98-9d99bc5e3324
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.journal_pissn_compact
+field_name: journal_pissn_compact
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

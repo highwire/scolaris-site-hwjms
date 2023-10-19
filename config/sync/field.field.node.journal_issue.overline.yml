@@ -1,0 +1,21 @@
+uuid: 39adcf91-9110-4def-b831-ec1270160f7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.overline
+    - node.type.journal_issue
+  module:
+    - text
+id: node.journal_issue.overline
+field_name: overline
+entity_type: node
+bundle: journal_issue
+label: overline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
