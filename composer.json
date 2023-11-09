@@ -1,18 +1,25 @@
 {
-    "name": "highwire/hwjma",
-    "description": "Site specific repository for hwjma",
+    "name": "highwire/scolaris-site-hwjma",
     "type": "project",
+    "description": "Scolaris hwjma site instance",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "discard-changes": true,
         "process-timeout": 0,
         "theme-directories": [
-            "web/modules/freebird/themes/highwire"
-        ]
+            "web/themes/highwire/scolaris_mhe"
+        ],
+        "allow-plugins": {
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "composer/installers": true,
+            "zaporylie/composer-drupal-optimizations": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "require": {
-        "highwire/freebird": "10.x-1.x-dev",
+        "highwire/freebird": "dev-9.4.x-release-2023",
         "highwire/freebird-scaffold": "dev-9.x-4.x-dev-rachit",
         "drupal/view_unpublished": "1.1.0",
         "drupal/profile_switcher": "1.0.0-alpha6",
@@ -31,8 +38,8 @@
         "dmore/chrome-mink-driver": "2.9.2",
         "phayes/elasticentityquery": "dev-9.x-4.x-dev-rachit",
         "drupal/advagg": "5.0.0",
-        "drupal/eme": "1.0.0-alpha13" 
-   },
+        "drupal/eme": "1.0.0-alpha13"
+    },
     "require-dev": {
         "sensiolabs/behat-page-object-extension": "v2.3.7",
         "behat/behat": "v3.13.0",
@@ -46,13 +53,18 @@
         "mikey179/vfsstream": "v1.6.11",
         "symfony/css-selector": "v4.4.44",
         "behat/mink-zombie-driver": "v1.6.0"
-    },
+        },
     "extra": {
         "patches": {
             "drupal/search_api_solr": {
-                "Unable to uninstall base theme and subtheme at the same time.": "https://www.drupal.org/files/issues/2020-10-28/3001430-5.patch"
+                "Add term autocomplete alter query hook support": "https://smart.highwire.org/sites/default/files/search-api-autocomplete-term-suggestions.patch"
             }
-        },        
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
         "composer-exit-on-patch-failure": true,
         "enable-patching": true,
         "installer-paths": {
@@ -105,7 +117,7 @@
         },
         "elasticeq": {
             "type": "git",
-            "url": "git@github.com:phayes/elasticentityquery.git"
+            "url": "git@github.com:highwire/elasticentityquery.git"
         },
         "marcrecords": {
             "type": "git",
@@ -126,6 +138,36 @@
         "transfertoken": {
             "type": "git",
             "url": "https://github.com/highwire/transfer-token-client-php.git"
+        },
+        "ckeditor": {
+             "type": "package",
+             "package": {
+                 "name": "ckeditor-plugin/fakeobjects",
+                 "version": "4.14.0",
+                 "type": "drupal-library",
+                 "dist": {
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip",
+                    "type": "zip"
+                  },
+                  "require": {
+                      "composer/installers": "~1.0"
+                  }
+               }
+         },
+        "ckeditor_link": {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/link",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip",
+                    "type": "zip"
+                 },
+                 "require": {
+                     "composer/installers": "~1.0"
+                 }
+            }
         }
     },
     "autoload": {
@@ -134,15 +176,20 @@
         ]
     },
     "scripts": {
+        "theme:compile": "FreebirdComposer\\CommandHandler::compileThemes",
         "post-install-cmd": [
             "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
             "FreebirdComposer\\CommandHandler::provisionSettings",
-            "HighWireSite\\composer\\FreebirdHandler::setupFreebirdCode"
+            "HighWireSite\\composer\\FreebirdHandler::setupFreebirdCode",
+            "HighWireSite\\composer\\FreebirdHandler::overridePatternLabConfig",
+            "@theme:compile"
         ],
         "post-update-cmd": [
             "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
             "FreebirdComposer\\CommandHandler::provisionSettings",
-            "HighWireSite\\composer\\FreebirdHandler::setupFreebirdCode"
+            "HighWireSite\\composer\\FreebirdHandler::setupFreebirdCode",
+            "HighWireSite\\composer\\FreebirdHandler::overridePatternLabConfig",
+            "@theme:compile"
         ]
     }
 }
