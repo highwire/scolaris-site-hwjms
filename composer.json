@@ -38,7 +38,8 @@
         "dmore/chrome-mink-driver": "2.9.2",
         "phayes/elasticentityquery": "dev-9.x-4.x-dev-rachit",
         "drupal/advagg": "5.0.0",
-        "drupal/eme": "1.0.0-alpha13"
+        "drupal/eme": "1.0.0-alpha13",
+        "twig/twig": "3.0.0"
     },
     "require-dev": {
         "sensiolabs/behat-page-object-extension": "v2.3.7",
