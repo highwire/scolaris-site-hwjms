@@ -40,7 +40,7 @@
         "drupal/advagg": "5.0.0",
         "drupal/eme": "1.0.0-alpha13",
         "twig/twig": "3.0.0",
-        "php": "^7.3||^8.0",
+        "php": "^7.3||^8.0"
     },
     "require-dev": {
         "sensiolabs/behat-page-object-extension": "v2.3.7",
