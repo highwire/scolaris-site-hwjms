@@ -27,7 +27,7 @@
         "drupal/devel": "4.2.1",
         "drush/drush": "10.6.2",
         "drupal/drupal-driver": "v2.2.2",
-        "drupal/core-composer-scaffold": "9.5.10",
+        "drupal/core-composer-scaffold": "10.0.0",
         "cweagans/composer-patches": "1.7.3",
         "zaporylie/composer-drupal-optimizations": "1.2.0",
         "vlucas/phpdotenv": "v4.3.0",
