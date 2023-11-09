@@ -27,7 +27,7 @@
         "drupal/devel": "4.2.1",
         "drush/drush": "11.0.0",
         "drupal/drupal-driver": "v2.2.2",
-        "drupal/core-composer-scaffold": "10.0.0",
+        "drupal/core-composer-scaffold": "10.1",
         "cweagans/composer-patches": "1.7.3",
         "zaporylie/composer-drupal-optimizations": "1.2.0",
         "vlucas/phpdotenv": "v4.3.0",
@@ -39,7 +39,7 @@
         "phayes/elasticentityquery": "dev-9.x-4.x-dev-rachit",
         "drupal/advagg": "5.0.0",
         "drupal/eme": "1.0.0-alpha13",
-        "twig/twig": "3.6.1"
+        "twig/twig": "3.0.0"
     },
     "require-dev": {
         "sensiolabs/behat-page-object-extension": "v2.3.7",
