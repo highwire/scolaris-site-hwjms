@@ -38,8 +38,7 @@
         "dmore/chrome-mink-driver": "2.9.2",
         "phayes/elasticentityquery": "dev-9.x-4.x-dev-rachit",
         "drupal/advagg": "6.0.0-alpha1",
-        "twig/twig": "3.6.0",
-        "php": "^7.3||^8.0"
+        "twig/twig": "3.6.0"
     },
     "require-dev": {
         "sensiolabs/behat-page-object-extension": "v2.3.7",
