@@ -8,7 +8,7 @@
         "discard-changes": true,
         "process-timeout": 0,
         "theme-directories": [
-            "web/themes/highwire/scolaris_mhe"
+            "web/themes/highwire/"
         ],
         "allow-plugins": {
             "cweagans/composer-patches": true,
@@ -19,7 +19,7 @@
         }
     },
     "require": {
-        "highwire/freebird": "dev-10.x-1.x-dev",
+        "highwire/freebird": "10.x-1.1-dev",
         "highwire/freebird-scaffold": "dev-9.x-4.x-dev-rachit",
         "drupal/view_unpublished": "1.1.0",
         "drupal/profile_switcher": "1.0.0-alpha6",
