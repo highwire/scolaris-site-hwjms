@@ -39,6 +39,16 @@
         "drupal/advagg": "6.0.0-alpha1",
         "twig/twig": "3.6.0"
     },
+    "require-dev": {
+        "behat/behat": "v3.13.0",
+        "behat/mink": "v1.10.0",
+        "behat/mink-selenium2-driver": "v1.6.0",
+        "behat/mink-extension": "2.3.1",
+        "behat/mink-goutte-driver": "v1.3.0",
+        "mikey179/vfsstream": "v1.6.11",
+        "behat/mink-zombie-driver": "v1.6.0",
+        "symfony/psr-http-message-bridge": "2.2.0"
+    },
     "extra": {
         "patches": {
             "drupal/search_api_solr": {
