@@ -150,7 +150,7 @@
                     "type": "zip"
                   },
                   "require": {
-                      "composer/installers": "~1.0"
+                      "composer/installers": "^2.0"
                   }
                }
          },
@@ -165,7 +165,7 @@
                     "type": "zip"
                  },
                  "require": {
-                     "composer/installers": "~1.0"
+                     "composer/installers": "^2.0",
                  }
             }
         }
