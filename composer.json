@@ -165,7 +165,7 @@
                     "type": "zip"
                  },
                  "require": {
-                     "composer/installers": "^2.0",
+                     "composer/installers": "^2.0"
                  }
             }
         }
