@@ -48,7 +48,6 @@
         "behat/mink-goutte-driver": "v1.3.0",
         "drupal/drupal-extension": "v4.2.1",
         "mikey179/vfsstream": "v1.6.11",
-        "symfony/css-selector": "v4.4.44",
         "behat/mink-zombie-driver": "v1.6.0",
         "symfony/psr-http-message-bridge": "2.2.0"
         },
