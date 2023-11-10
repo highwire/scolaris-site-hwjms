@@ -32,7 +32,6 @@
         "bower-asset/jquery-ui-slider-pips": "v1.11.5",
         "laminas/laminas-code": "4.11.0",
         "roave/better-reflection": "6.13.0",
-        "cache/array-adapter": "1.2.0",
         "dmore/chrome-mink-driver": "2.9.2",
         "phayes/elasticentityquery": "dev-9.x-4.x-dev-rachit",
         "drupal/advagg": "6.0.0-alpha1",
