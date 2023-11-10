@@ -25,7 +25,6 @@
         "drupal/profile_switcher": "1.0.0-alpha6",
         "whichbrowser/parser": "v2.1.7",
         "drupal/devel": "5.0.2",
-        "drupal/drupal-driver": "v2.2.2",
         "drupal/core-composer-scaffold": "10.1",
         "cweagans/composer-patches": "1.7.3",
         "zaporylie/composer-drupal-optimizations": "1.2.0",
