@@ -36,8 +36,7 @@
         "roave/better-reflection": "6.13.0",
         "dmore/chrome-mink-driver": "2.9.2",
         "phayes/elasticentityquery": "dev-9.x-4.x-dev-rachit",
-        "drupal/advagg": "6.0.0-alpha1",
-        "twig/twig": "3.6.0"
+        "drupal/advagg": "6.0.0-alpha1"
     },
     "require-dev": {
         "behat/behat": "v3.13.0",
