@@ -149,15 +149,13 @@
             "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
             "FreebirdComposer\\CommandHandler::provisionSettings",
             "HighWireSite\\composer\\FreebirdHandler::setupFreebirdCode",
-            "HighWireSite\\composer\\FreebirdHandler::overridePatternLabConfig",
-            "@theme:compile"
+            "HighWireSite\\composer\\FreebirdHandler::overridePatternLabConfig"
         ],
         "post-update-cmd": [
             "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
             "FreebirdComposer\\CommandHandler::provisionSettings",
             "HighWireSite\\composer\\FreebirdHandler::setupFreebirdCode",
-            "HighWireSite\\composer\\FreebirdHandler::overridePatternLabConfig",
-            "@theme:compile"
+            "HighWireSite\\composer\\FreebirdHandler::overridePatternLabConfig"
         ]
     }
 }
