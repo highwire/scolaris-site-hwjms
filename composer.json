@@ -25,7 +25,6 @@
         "drupal/profile_switcher": "1.0.0-alpha6",
         "composer/installers": "^2.0",
         "drupal/core-composer-scaffold": "^10.1",
-        "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/advagg": "6.0.0-alpha1"
     },
