@@ -23,37 +23,13 @@
         "highwire/freebird-scaffold": "dev-10.x-1.x-dev",
         "drupal/view_unpublished": "1.1.0",
         "drupal/profile_switcher": "1.0.0-alpha6",
-        "whichbrowser/parser": "v2.1.7",
         "composer/installers": "^2.0",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
-        "cweagans/composer-patches": "1.7.3",
-        "zaporylie/composer-drupal-optimizations": "1.2.0",
-        "vlucas/phpdotenv": "v4.3.0",
-        "bower-asset/jquery-ui-slider-pips": "v1.11.5",
-        "laminas/laminas-code": "4.11.0",
-        "roave/better-reflection": "6.13.0",
-        "dmore/chrome-mink-driver": "2.9.2",
-        "phayes/elasticentityquery": "dev-9.x-4.x-dev-rachit",
         "drupal/advagg": "6.0.0-alpha1"
     },
-    "require-dev": {
-        "behat/behat": "v3.13.0",
-        "behat/mink": "v1.10.0",
-        "behat/mink-selenium2-driver": "v1.6.0",
-        "behat/mink-extension": "2.3.1",
-        "behat/mink-goutte-driver": "v2.0.0",
-        "mikey179/vfsstream": "v1.6.11",
-        "behat/mink-zombie-driver": "v1.6.0",
-        "symfony/psr-http-message-bridge": "2.2.0"
-    },
     "extra": {
-        "patches": {
-            "drupal/search_api_solr": {
-                "Add term autocomplete alter query hook support": "https://smart.highwire.org/sites/default/files/search-api-autocomplete-term-suggestions.patch"
-            }
-        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
