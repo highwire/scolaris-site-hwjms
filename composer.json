@@ -107,36 +107,6 @@
         "transfertoken": {
             "type": "git",
             "url": "https://github.com/highwire/transfer-token-client-php.git"
-        },
-        "ckeditor": {
-             "type": "package",
-             "package": {
-                 "name": "ckeditor-plugin/fakeobjects",
-                 "version": "4.14.0",
-                 "type": "drupal-library",
-                 "dist": {
-                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip",
-                    "type": "zip"
-                  },
-                  "require": {
-                      "composer/installers": "^2.0"
-                  }
-               }
-         },
-        "ckeditor_link": {
-            "type": "package",
-            "package": {
-                "name": "ckeditor-plugin/link",
-                "version": "4.14.0",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip",
-                    "type": "zip"
-                 },
-                 "require": {
-                     "composer/installers": "^2.0"
-                 }
-            }
         }
     },
     "autoload": {
