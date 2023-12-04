@@ -18,8 +18,6 @@
 <!DOCTYPE schema [
   <!ENTITY extrafields SYSTEM "schema_extra_fields.xml">
   <!ENTITY extratypes SYSTEM "schema_extra_types.xml">
-  <!ENTITY legacyfields SYSTEM "schema_legacy_fields.xml">
-  <!ENTITY legacytypes SYSTEM "schema_legacy_types.xml">
 ]>
 
 <!--
@@ -51,7 +49,7 @@
     that avoids logging every request
 -->
 
-<schema name="drupal-4.2.12-solr-8.x-0" version="1.6">
+<schema name="drupal-4.3.1-solr-8.x-0" version="1.6">
   <!-- attribute "name" is the name of this schema and is only used for display purposes.
        version="x.y" is Solr's version number for the schema syntax and
        semantics.  It should not normally be changed by applications.
@@ -125,27 +123,7 @@
      document support, may be removed otherwise
   -->
   <field name="_root_" type="string" indexed="true" stored="false" docValues="false"/>
-   <!-- Change indexing of autocomplete terms field-->
-  <field name="tm_autocomplete_terms" type="hw_autocomplete" indexed="true" stored="true" omitNorms="true" />
-<!-- Setup multiple fields for spellchecking against -->
-  <field name="didYouMean" type="textSpell" indexed="true" stored="false" multiValued="true"/>
-  <field name="autocomplete_title" type="textSpell" indexed="true" stored="true" multiValued="true"/>
-  <field name="abstract" type="string" indexed="true" stored="true" multiValued="false" />
-  <field name="subject" type="generalText" indexed="true" stored="true" multiValued="true" />
-  <!-- copyField commands copy one field to another at the time a document
-       is added to the index.  It's used either to index the same field differently,
-       or to add multiple fields to the same field for easier/faster searching.  -->
-  <!--  <copyField source="ts_*" dest="spell"/> -->
-  <!-- <copyField source="tm_*" dest="spell"/> -->
 
-  <copyField source="ts_*" dest="terms_ts_*"/>
-  <copyField source="tm_autocomplete_terms" dest="didYouMean"/>
-  <copyField source="ss_title_spellcheck" dest="didYouMean"/>  
-  <copyField source="tm_X3b_en_autocomplete_terms" dest="autocomplete_title"/>
-  <copyField source="tm_X3b_en_*" dest="tm_*"/>
-  <copyField source="tm_*" dest="terms_tm_*"/>
-  <copyField source="terms_tm_X3b_en_*" dest="terms_tm_*"/>
-  <copyField source="sort_X3b_en_*" dest="sort_*"/>
   <!-- Only remove the "id" field if you have a very good reason to. While not strictly
   required, it is highly recommended. A <uniqueKey> is present in almost all Solr
   installations. See the <uniqueKey> declaration below where <uniqueKey> is set to "id".
@@ -259,27 +237,19 @@
 
   <!-- External file fields -->
   <dynamicField name="eff_*" type="file"/>
-  <!-- Sortable version of the dynamic string field -->
-  <dynamicField name="sort_*" type="sortString" indexed="true" stored="false"/>
 
   <!-- A random sort field -->
   <dynamicField name="random_*" type="random" indexed="true" stored="true"/>
 
   <!-- This field is used to store access information (e.g. node access grants), as opposed to field data -->
   <dynamicField name="access_*" type="pint" indexed="true" stored="false" multiValued="true" docValues="true"/>
-  <!-- Custom freebird field type -->
-  <dynamicField name="hw_pbs_*" type="hw_payload_boost" indexed="true"  stored="true" multiValued="false"/>
-  <dynamicField name="hw_pbm_*" type="hw_payload_boost" indexed="true"  stored="true" multiValued="true"/>
+
   <!-- The following causes solr to ignore any fields that don't already match an existing
        field name or dynamic field, rather than reporting them as an error.
        Alternately, change the type="ignored" to some other type e.g. "text" if you want
        unknown fields indexed and/or stored by default -->
-  <dynamicField name="tm_*" type="text" indexed="true" stored="true" multiValued="true" termVectors="true"/>
-  <dynamicField name="ts_*"  type="text"    indexed="true"  stored="true" multiValued="false" termVectors="true"/>
   <dynamicField name="*" type="ignored" multiValued="true" />
-  <dynamicField name="terms_ts_*" type="textSpell" indexed="true" stored="true" multiValued="false"/>
-  <dynamicField name="terms_tm_*" type="textSpell" indexed="true" stored="true" multiValued="true"/>
-  
+
 
     <!-- field type definitions. The "name" attribute is
        just a label to be used by field definitions.  The "class"
@@ -294,10 +264,7 @@
        single-valued and either required or have a default value.
       -->
     <fieldType name="string" class="solr.StrField"/>
-    <!-- spell checker -->
-    <field name="master-dictionary" type="tagsText" indexed="true" stored="true" multiValued="true" />
-    <copyField source="abstract" dest="master-dictionary" />
-    <copyField source="subject" dest="master-dictionary" />
+
     <!-- boolean type: "true" or "false" -->
     <fieldType name="boolean" class="solr.BoolField"/>
 
@@ -400,38 +367,6 @@
       <analyzer class="org.apache.lucene.analysis.el.GreekAnalyzer"/>
     </fieldType>
     -->
- <fieldType name="sortString" class="solr.TextField" omitNorms="true">
-      <analyzer>
-        <!-- KeywordTokenizer does no actual tokenizing, so the entire
-            input string is preserved as a single token
-          -->
-        <tokenizer class="solr.KeywordTokenizerFactory"/>
-        <!-- The LowerCase TokenFilter does what you expect, which can be
-            when you want your sorting to be case insensitive
-          -->
-        <filter class="solr.LowerCaseFilterFactory" />
-        <!-- The TrimFilter removes any leading or trailing whitespace -->
-        <filter class="solr.TrimFilterFactory" />
-        <!-- The PatternReplaceFilter gives you the flexibility to use
-            Java Regular expression to replace any sequence of characters
-            matching a pattern with an arbitrary replacement string,
-            which may include back refrences to portions of the orriginal
-            string matched by the pattern.
-            See the Java Regular Expression documentation for more
-            infomation on pattern and replacement string syntax.
-            http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/package-summary.html
-        <filter class="solr.PatternReplaceFilterFactory"
-               pattern="(^\p{Punct}+)" replacement="" replace="all"
-        />
-        -->
-        <filter class="solr.PatternReplaceFilterFactory" pattern="^(a |an |the |les |la |le |l'|de la |du |des )" replacement="" replace="all"  />
-        <filter class="solr.PatternReplaceFilterFactory" pattern="(\d+)" replacement="00000$1" replace="all" />
-        <!-- Left-trim zeroes to produce 6 digit numbers -->
-        <filter class="solr.PatternReplaceFilterFactory" pattern="0*([0-9]{6,})" replacement="$1" replace="all" />
-        <filter class="solr.PatternReplaceFilterFactory" pattern="([^a-z0-9])" replacement="" replace="all"/>
-
-      </analyzer>
-    </fieldType>
 
     <!-- A text field that only splits on whitespace for exact matching of words -->
     <fieldType name="text_ws" class="solr.TextField" omitNorms="true" positionIncrementGap="100">
@@ -461,32 +396,6 @@
         <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="float"/>
       </analyzer>
     </fieldType>
- <fieldType name="tagsText" class="solr.TextField" sortMissingLast="true" omitNorms="false">
-      <analyzer type="index">
-        <tokenizer class="solr.StandardTokenizerFactory" />
-        <filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1"
-          catenateWords="1" catenateNumbers="1" catenateAll="0" />
-        <filter class="solr.LowerCaseFilterFactory" />
-        <filter class="solr.RemoveDuplicatesTokenFilterFactory" />
-      </analyzer>
-      <analyzer type="query">
-        <tokenizer class="solr.StandardTokenizerFactory" />
-        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true" />
-        <filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1"
-          catenateWords="0" catenateNumbers="0" catenateAll="0" />
-        <filter class="solr.LowerCaseFilterFactory" />
-        <filter class="solr.RemoveDuplicatesTokenFilterFactory" />
-      </analyzer>
-    </fieldType>
-   <fieldType name="generalText" class="solr.TextField" positionIncrementGap="100">
-      <analyzer type="index">
-        <tokenizer class="solr.StandardTokenizerFactory" />
-      </analyzer>
-      <analyzer type="query">
-        <tokenizer class="solr.StandardTokenizerFactory" />
-        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true" />
-      </analyzer>
-    </fieldType>
 
     <!-- since fields of this type are by default not stored or indexed,
          any data added to them will be ignored outright.  -->
@@ -510,110 +419,6 @@
 
     <!-- A specialized field for geospatial search. If indexed, this fieldType must not be multivalued. -->
     <fieldType name="location" class="solr.LatLonPointSpatialField" docValues="true"/>
-    <fieldType name="hw_autocomplete" class="solr.TextField" positionIncrementGap="100" multiValued="true">
-     <analyzer type="index">
-       <tokenizer class="solr.KeywordTokenizerFactory"/>
-       <filter class="solr.LowerCaseFilterFactory"/>
-     </analyzer>
-     <analyzer type="query">
-       <tokenizer class="solr.KeywordTokenizerFactory"/>
-       <filter class="solr.LowerCaseFilterFactory"/>
-     </analyzer>
-    </fieldType>
-    <fieldType name="text" class="solr.TextField" positionIncrementGap="100">
-      <analyzer type="index">
-        <charFilter class="solr.MappingCharFilterFactory" mapping="mapping-ISOLatin1Accent.txt"/>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
-        <filter class="solr.TokenOffsetPayloadTokenFilterFactory"/>
-        <!-- in this example, we will only use synonyms at query time
-        <filter class="solr.SynonymFilterFactory" synonyms="index_synonyms.txt" ignoreCase="true" expand="false"/>
-        -->
-        <!-- Case insensitive stop word removal. -->
-        <filter class="solr.SynonymFilterFactory" synonyms="us_uk_synonyms.txt" ignoreCase="true" expand="true"/>
-        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
-        <filter class="solr.StopFilterFactory"
-                ignoreCase="true"
-                words="stopwords.txt"
-                />
-        <filter class="solr.WordDelimiterGraphFilterFactory"
-                protected="protwords.txt"
-                splitOnNumerics="0"
-                generateWordParts="0"
-                generateNumberParts="0"
-                catenateWords="0"
-                catenateNumbers="0"
-                catenateAll="0"
-                splitOnCaseChange="0"
-                preserveOriginal="1"/>
-        <filter class="solr.LengthFilterFactory" min="1" max="100" />
-        <filter class="solr.LowerCaseFilterFactory"/>
-        <filter class="solr.SnowballPorterFilterFactory" language="English" protected="protwords.txt"/>
-        <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
-      </analyzer>
-      <analyzer type="query">
-        <charFilter class="solr.MappingCharFilterFactory" mapping="mapping-ISOLatin1Accent.txt"/>
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
-
-        <filter class="solr.SynonymFilterFactory" synonyms="us_uk_synonyms.txt" ignoreCase="true" expand="true"/>
-        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
-
-         <filter class="solr.StopFilterFactory"
-                ignoreCase="true"
-                words="stopwords.txt"
-                />
-
-        <filter class="solr.WordDelimiterGraphFilterFactory"
-                protected="protwords.txt"
-                splitOnNumerics="0"
-                generateWordParts="0"
-                generateNumberParts="0"
-                catenateWords="0"
-                catenateNumbers="0"
-                catenateAll="0"
-                splitOnCaseChange="0"
-                preserveOriginal="1"/>
-
-        <filter class="solr.LengthFilterFactory" min="1" max="100" />
-        <filter class="solr.LowerCaseFilterFactory"/>
-
-        <filter class="solr.SnowballPorterFilterFactory" language="English" protected="protwords.txt"/>
-
-        <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
-      </analyzer>
-
-    </fieldType>
-    <fieldType name="textSpell" class="solr.TextField" positionIncrementGap="100">
-  <analyzer type="index">
-    <tokenizer class="solr.KeywordTokenizerFactory" />
-    <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt"/>
-    <filter class="solr.LowerCaseFilterFactory" />
-    <filter class="solr.RemoveDuplicatesTokenFilterFactory" />
-    <filter class="solr.LengthFilterFactory" min="0" max="30000" />
-  </analyzer>
-  <analyzer type="query">
-    <tokenizer class="solr.KeywordTokenizerFactory" />
-    <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt"/>
-    <filter class="solr.LowerCaseFilterFactory" />
-    <filter class="solr.RemoveDuplicatesTokenFilterFactory" />
-    <filter class="solr.LengthFilterFactory" min="0" max="30000" />
-  </analyzer>
-</fieldType>
- <fieldType name="hw_payload_boost" class="solr.TextField" omitNorms="true" positionIncrementGap="100">
-      <analyzer type="index">
-        <tokenizer class="solr.KeywordTokenizerFactory"/>
-        <filter class="solr.LowerCaseFilterFactory"/>
-        <filter class="solr.ASCIIFoldingFilterFactory"/>
-        <filter class="solr.DelimitedPayloadTokenFilterFactory" encoder="float" delimiter="|"/>
-      </analyzer>
-      <analyzer type="query">
-        <tokenizer class="solr.KeywordTokenizerFactory"/>
-        <filter class="solr.PatternReplaceFilterFactory" pattern='\"' replacement=""/>
-        <filter class="solr.LowerCaseFilterFactory"/>
-        <filter class="solr.ASCIIFoldingFilterFactory"/>
-        <filter class="solr.SynonymGraphFilterFactory" synonyms="ai-non-preffered-synonyms.txt" ignoreCase="true" expand="false" tokenizerFactory="solr.KeywordTokenizerFactory"/>
-      </analyzer>
-    </fieldType>
-
 
     <!-- An alternative geospatial field type new to Solr 4.  It supports multiValued and polygon shapes.
       For more information about this and other Spatial fields new to Solr 4, see:
