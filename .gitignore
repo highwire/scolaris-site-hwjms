@@ -31,3 +31,5 @@ composer.lock
 pull.sh
 push.sh
 package-lock.json
+/.editorconfig
+/.gitattributes
