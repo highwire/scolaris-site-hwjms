@@ -1,0 +1,21 @@
+uuid: 28bf2db8-881b-4130-b26b-e1fcf4184dc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.date_revision
+    - node.type.media
+  module:
+    - datetime_range
+id: node.media.date_revision
+field_name: date_revision
+entity_type: node
+bundle: media
+label: date-revision
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

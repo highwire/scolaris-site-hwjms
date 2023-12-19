@@ -1,0 +1,27 @@
+uuid: f46cd779-d032-4425-80f7-4fe8253173ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.variant_full_text_pdf
+    - node.type.media
+  module:
+    - file
+id: node.media.variant_full_text_pdf
+field_name: variant_full_text_pdf
+entity_type: node
+bundle: media
+label: variant-full-text-pdf
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,21 @@
+uuid: 2f04a6e6-2e9f-473f-9584-32e918407254
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.has_early_release
+    - node.type.media
+id: node.media.has_early_release
+field_name: has_early_release
+entity_type: node
+bundle: media
+label: has-early-release
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

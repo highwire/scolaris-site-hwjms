@@ -1,0 +1,22 @@
+uuid: 2a0d68b8-ccb4-47fa-a5e7-a22d0ba1d650
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.video_id
+    - node.type.media
+  module:
+    - text
+id: node.media.video_id
+field_name: video_id
+entity_type: node
+bundle: media
+label: video-id
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

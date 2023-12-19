@@ -11,6 +11,8 @@ dependencies:
     - field.field.node.journal.article_type
     - field.field.node.journal.atom_type
     - field.field.node.journal.authors_full_name
+    - field.field.node.journal.authors_only_full_name
+    - field.field.node.journal.bookvault_skuid
     - field.field.node.journal.chapter_type
     - field.field.node.journal.children
     - field.field.node.journal.col_url
@@ -37,6 +39,7 @@ dependencies:
     - field.field.node.journal.final_published
     - field.field.node.journal.fpage
     - field.field.node.journal.georef_id
+    - field.field.node.journal.guest_editors
     - field.field.node.journal.has_abstract
     - field.field.node.journal.has_early_release
     - field.field.node.journal.has_figures
@@ -112,12 +115,14 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
   field_group:
     group_description:
       children: {  }
+      label: description
       parent_name: ''
+      region: content
       weight: 3
       format_type: highwire_bootstrap_collapse
       format_settings:
@@ -132,19 +137,17 @@ third_party_settings:
         open: 0
         ajax_markup:
           ajax_markup_enabled: 0
-      label: description
-      region: content
     group_action_tools:
       children: {  }
+      label: 'Action Tools'
       parent_name: ''
+      region: content
       weight: 4
       format_type: highwire_html_list
       format_settings:
         id: ''
         classes: ''
         list_type: ul
-      label: 'Action Tools'
-      region: content
 _core:
   default_config_hash: jK0fqaKlSfxGJY9vcrPLEAJYHw7IiHqi_GZ5KthirNA
 id: node.journal.browse_list_item
@@ -153,24 +156,24 @@ bundle: journal
 mode: browse_list_item
 content:
   cover_image:
+    settings: {  }
+    third_party_settings: {  }
     weight: 1
     region: content
+  current_issue_link:
     settings: {  }
     third_party_settings: {  }
-  current_issue_link:
     weight: 2
     region: content
-    settings: {  }
-    third_party_settings: {  }
   journal_current_issue:
     type: entity_reference_entity_view
-    weight: 0
-    region: content
     label: hidden
     settings:
       view_mode: cover_only
       link: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   about: true
   addtoany: true
@@ -182,6 +185,8 @@ hidden:
   article_type: true
   atom_type: true
   authors_full_name: true
+  authors_only_full_name: true
+  bookvault_skuid: true
   ccc_permissions_link: true
   chapter_type: true
   children: true
@@ -210,6 +215,7 @@ hidden:
   final_published: true
   fpage: true
   georef_id: true
+  guest_editors: true
   has_abstract: true
   has_early_release: true
   has_figures: true
@@ -256,6 +262,10 @@ hidden:
   next_atom: true
   overline: true
   page_count: true
+  pap_alias: true
+  pap_article_view: true
+  pap_landing_page_text: true
+  pap_page_link: true
   parent: true
   parent_issue: true
   parent_journal: true

@@ -11,6 +11,8 @@ dependencies:
     - field.field.node.journal.article_type
     - field.field.node.journal.atom_type
     - field.field.node.journal.authors_full_name
+    - field.field.node.journal.authors_only_full_name
+    - field.field.node.journal.bookvault_skuid
     - field.field.node.journal.chapter_type
     - field.field.node.journal.children
     - field.field.node.journal.col_url
@@ -37,6 +39,7 @@ dependencies:
     - field.field.node.journal.final_published
     - field.field.node.journal.fpage
     - field.field.node.journal.georef_id
+    - field.field.node.journal.guest_editors
     - field.field.node.journal.has_abstract
     - field.field.node.journal.has_early_release
     - field.field.node.journal.has_figures
@@ -112,8 +115,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: _wPijnwWMJjY6Fu3Uo3UefanQXZczX06HcJxG9Pl7zw
 id: node.journal.full_text_markup
@@ -123,11 +126,11 @@ mode: full_text_markup
 content:
   hwmd_abstract_search_index_:
     type: hwmarkup_display_formatter
-    weight: 0
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   about: true
   addtoany: true
@@ -139,6 +142,8 @@ hidden:
   article_type: true
   atom_type: true
   authors_full_name: true
+  authors_only_full_name: true
+  bookvault_skuid: true
   ccc_permissions_link: true
   chapter_type: true
   children: true
@@ -169,6 +174,7 @@ hidden:
   final_published: true
   fpage: true
   georef_id: true
+  guest_editors: true
   has_abstract: true
   has_early_release: true
   has_figures: true
@@ -215,6 +221,10 @@ hidden:
   next_atom: true
   overline: true
   page_count: true
+  pap_alias: true
+  pap_article_view: true
+  pap_landing_page_text: true
+  pap_page_link: true
   parent: true
   parent_issue: true
   parent_journal: true

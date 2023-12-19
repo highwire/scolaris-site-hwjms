@@ -1,0 +1,21 @@
+uuid: cb5e9b7b-751a-4223-9c4c-a8b893cbfdcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.has_ref_stub
+    - node.type.media
+id: node.media.has_ref_stub
+field_name: has_ref_stub
+entity_type: node
+bundle: media
+label: has-ref-stub
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

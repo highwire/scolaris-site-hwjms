@@ -11,6 +11,8 @@ dependencies:
     - field.field.node.journal_issue.article_type
     - field.field.node.journal_issue.atom_type
     - field.field.node.journal_issue.authors_full_name
+    - field.field.node.journal_issue.authors_only_full_name
+    - field.field.node.journal_issue.bookvault_skuid
     - field.field.node.journal_issue.chapter_type
     - field.field.node.journal_issue.children
     - field.field.node.journal_issue.col_url
@@ -37,6 +39,7 @@ dependencies:
     - field.field.node.journal_issue.final_published
     - field.field.node.journal_issue.fpage
     - field.field.node.journal_issue.georef_id
+    - field.field.node.journal_issue.guest_editors
     - field.field.node.journal_issue.has_abstract
     - field.field.node.journal_issue.has_early_release
     - field.field.node.journal_issue.has_figures
@@ -115,27 +118,29 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
   field_group:
     group_action_tools:
       children:
         - hw_marker_sign_up
         - group_share_popup
         - hw_alerts_sign_up
+      label: 'Action Tools'
       parent_name: ''
+      region: content
       weight: 13
       format_type: highwire_html_list
       format_settings:
         id: ''
         classes: ''
         list_type: ul
-      label: 'Action Tools'
-      region: content
     group_share_popup:
       children:
         - addtoany
+      label: 'share popup'
       parent_name: group_action_tools
+      region: content
       weight: 4
       format_type: highwire_bootstrap_modal_popup
       format_settings:
@@ -156,8 +161,6 @@ third_party_settings:
         separate_toggle_button_settings:
           button_weight: ''
           button_parent: default
-      label: 'share popup'
-      region: content
 _core:
   default_config_hash: 9nK1S0L7PssNYLvd5ajp_Ka7g8s1gZVqvv4wWEyzhzI
 id: node.journal_issue.content_details
@@ -166,31 +169,29 @@ bundle: journal_issue
 mode: content_details
 content:
   addtoany:
+    settings: {  }
+    third_party_settings: {  }
     weight: 14
     region: content
-    settings: {  }
-    third_party_settings: {  }
   date_ppub:
     type: daterange_default
-    weight: 8
-    region: content
     label: above
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
+      format_type: medium
+      separator: '-'
     third_party_settings: {  }
+    weight: 8
+    region: content
   doi:
     type: text_default
-    weight: 11
-    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 11
+    region: content
   enclosures:
     type: access_aware_file_url_plain
-    weight: 12
-    region: content
     label: above
     settings:
       access_rules:
@@ -200,91 +201,93 @@ content:
       access_denied_html: 'Log-in to access free PDF or view purchase options'
       access_link_hide: false
     third_party_settings: {  }
+    weight: 12
+    region: content
   fpage:
     type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
     weight: 6
     region: content
-    label: above
+  hw_alerts_sign_up:
     settings: {  }
     third_party_settings: {  }
-  hw_alerts_sign_up:
     weight: 5
     region: content
+  hw_marker_sign_up:
     settings: {  }
     third_party_settings: {  }
-  hw_marker_sign_up:
     weight: 3
     region: content
-    settings: {  }
-    third_party_settings: {  }
   issue:
     type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
     weight: 5
     region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   issue_title:
     type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
     weight: 3
     region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   journal_eissn:
     type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
     weight: 9
     region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   journal_pissn:
     type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
     weight: 10
     region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   lpage:
     type: text_default
-    weight: 7
-    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 7
+    region: content
   parent_journal:
     type: entity_reference_label
-    weight: 2
-    region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 2
+    region: content
   variant_cover_image:
     type: image
-    weight: 1
-    region: content
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
+    weight: 1
+    region: content
   variant_cover_source_image:
     type: image
-    weight: 0
-    region: content
     label: above
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
   volume:
     type: text_default
-    weight: 4
-    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 4
+    region: content
 hidden:
   adjuncts: true
   apath: true
@@ -293,6 +296,8 @@ hidden:
   article_type: true
   atom_type: true
   authors_full_name: true
+  authors_only_full_name: true
+  bookvault_skuid: true
   ccc_permissions_link: true
   chapter_type: true
   children: true
@@ -316,6 +321,7 @@ hidden:
   extract_policy: true
   final_published: true
   georef_id: true
+  guest_editors: true
   has_abstract: true
   has_early_release: true
   has_figures: true
