@@ -1,0 +1,20 @@
+uuid: 850f5186-3aec-4ece-8a06-18cfa5b3175c
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - node
+id: node.date_epub_original
+field_name: date_epub_original
+entity_type: node
+type: daterange
+settings:
+  datetime_type: datetime
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

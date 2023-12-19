@@ -1,0 +1,19 @@
+uuid: 900bb801-c115-4dcd-bf8a-a6b98126ea69
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.parent_journal
+field_name: parent_journal
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

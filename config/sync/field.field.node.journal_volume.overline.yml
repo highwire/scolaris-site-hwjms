@@ -1,0 +1,22 @@
+uuid: 7d982203-8a9a-4dce-840e-07a0fd3d25b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.overline
+    - node.type.journal_volume
+  module:
+    - text
+id: node.journal_volume.overline
+field_name: overline
+entity_type: node
+bundle: journal_volume
+label: overline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

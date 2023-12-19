@@ -1,0 +1,22 @@
+uuid: 215e3c25-db3c-4d75-8e7f-a609ca04fdbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.title_short
+    - node.type.journal_fragment
+  module:
+    - text
+id: node.journal_fragment.title_short
+field_name: title_short
+entity_type: node
+bundle: journal_fragment
+label: title-short
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,22 @@
+uuid: 2c601b76-2b41-43fe-b98d-5775f2991a4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.doi
+    - node.type.journal_fragment
+  module:
+    - text
+id: node.journal_fragment.doi
+field_name: doi
+entity_type: node
+bundle: journal_fragment
+label: doi
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

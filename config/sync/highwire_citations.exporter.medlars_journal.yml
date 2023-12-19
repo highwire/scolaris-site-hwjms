@@ -1,0 +1,15 @@
+uuid: ece9dead-f45e-43e8-ac9c-2fab2ac9c833
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: g3tHnNqVAiOd-5AkrXcWAmIaGnZQcS20boy0VVh7euw
+title: 'Medlars Journal'
+id: medlars_journal
+export_plugin: medlars
+label: null
+format_type: null
+citations_tokens: "PT|[]\r\nAU|[]\r\nAU|[]\r\nTI|[]\r\nDP|[]\r\nTA|[]\r\nPG|[]\r\nVI|[]\r\nIP|[]\r\n4099|[]\r\n4100|[]\r\nSO|[]"
+content_types: null
+content_type_prefix: null
+citations_markup: null

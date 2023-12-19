@@ -1,0 +1,19 @@
+uuid: 884b6294-ca7f-4b5b-a39c-1a0f0c3c7b9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.journal_eissn_compact
+field_name: journal_eissn_compact
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

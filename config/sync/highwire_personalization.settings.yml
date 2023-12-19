@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: Pxth7sNsS5mshjiXLFyUNe2Ky1kkQd6BqF23xLmp9rI
+context: ''
+saved_search_api_base_path: ''
+alert_type_config: null
+markers_content_type_filters: {  }
+markers_admin_citations_view_mode: {  }
+profile_and_privacy_form_class: ''
+profile_and_privacy_pop_welcome_message: 'You are registered for a personal account.'
+tags_admin_citations_view_mode: {  }

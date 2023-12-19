@@ -1,0 +1,22 @@
+uuid: efa850ed-659c-4286-bf8d-a6113c755689
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.col_url
+    - node.type.journal_issue
+  module:
+    - text
+id: node.journal_issue.col_url
+field_name: col_url
+entity_type: node
+bundle: journal_issue
+label: col-url
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

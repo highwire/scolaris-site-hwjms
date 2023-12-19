@@ -1,0 +1,19 @@
+uuid: b33e99e2-80f8-4792-88b9-d3af125384e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.extract_policy
+    - node.type.journal_issue
+id: node.journal_issue.extract_policy
+field_name: extract_policy
+entity_type: node
+bundle: journal_issue
+label: 'Extract Policy'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

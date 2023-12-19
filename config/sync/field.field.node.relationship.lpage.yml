@@ -1,0 +1,22 @@
+uuid: 56a70a63-3fc0-428c-ac7b-2257a60cedfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.lpage
+    - node.type.relationship
+  module:
+    - text
+id: node.relationship.lpage
+field_name: lpage
+entity_type: node
+bundle: relationship
+label: lpage
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

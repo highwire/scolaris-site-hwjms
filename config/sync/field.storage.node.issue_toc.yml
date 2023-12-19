@@ -1,0 +1,19 @@
+uuid: 2c0f6119-35dc-4ad4-8e73-4351df7e34e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.issue_toc
+field_name: issue_toc
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

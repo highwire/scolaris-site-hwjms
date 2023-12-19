@@ -1,0 +1,27 @@
+uuid: a7e5d18e-ce9a-4d30-b76a-1abde9631547
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.enclosures
+    - node.type.relationship
+  module:
+    - file
+id: node.relationship.enclosures
+field_name: enclosures
+entity_type: node
+bundle: relationship
+label: enclosures
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,32 @@
+uuid: 3ad260ee-f201-4e6e-980b-4a7c36d5a7df
+langcode: en
+status: true
+dependencies:
+  module:
+    - double_field
+    - node
+id: node.keywords
+field_name: keywords
+entity_type: node
+type: double_field
+settings:
+  storage:
+    first:
+      type: string
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+    second:
+      type: string
+      maxlength: 255
+      precision: 10
+      scale: 2
+      datetime_type: datetime
+module: double_field
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

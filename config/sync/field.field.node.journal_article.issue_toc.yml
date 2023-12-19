@@ -1,0 +1,22 @@
+uuid: 5d8b40ef-f2bb-43a6-a667-643788647d86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.issue_toc
+    - node.type.journal_article
+  module:
+    - text
+id: node.journal_article.issue_toc
+field_name: issue_toc
+entity_type: node
+bundle: journal_article
+label: issue-toc
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

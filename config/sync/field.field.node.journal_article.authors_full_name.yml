@@ -1,0 +1,22 @@
+uuid: 7071f4ed-0d43-4c52-b700-f51cb573450d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.authors_full_name
+    - node.type.journal_article
+  module:
+    - text
+id: node.journal_article.authors_full_name
+field_name: authors_full_name
+entity_type: node
+bundle: journal_article
+label: authors-full-name
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

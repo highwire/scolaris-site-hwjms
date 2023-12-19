@@ -1,0 +1,22 @@
+uuid: e416b682-f77d-4764-bd3c-9daa1a5223a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.subtype
+    - node.type.relationship
+  module:
+    - text
+id: node.relationship.subtype
+field_name: subtype
+entity_type: node
+bundle: relationship
+label: subtype
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

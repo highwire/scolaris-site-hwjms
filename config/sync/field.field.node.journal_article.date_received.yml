@@ -1,0 +1,21 @@
+uuid: 7d4f6c52-aec2-4575-af5b-2f7f7d2d1b5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.date_received
+    - node.type.journal_article
+  module:
+    - datetime_range
+id: node.journal_article.date_received
+field_name: date_received
+entity_type: node
+bundle: journal_article
+label: date-received
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

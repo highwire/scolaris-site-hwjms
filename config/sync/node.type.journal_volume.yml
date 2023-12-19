@@ -1,0 +1,11 @@
+uuid: 4b69a6eb-8fb7-4300-a99b-089b991b1aaa
+langcode: en
+status: true
+dependencies: {  }
+name: journal_volume
+type: journal_volume
+description: 'Auto generated HighWire content type for journal-volume'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

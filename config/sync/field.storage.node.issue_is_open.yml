@@ -1,0 +1,18 @@
+uuid: e186065c-af8a-4ca6-ba92-9011bf72b6bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.issue_is_open
+field_name: issue_is_open
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

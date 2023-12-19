@@ -1,0 +1,26 @@
+uuid: fd52268e-5b08-4d29-8690-ed0d63a7d302
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.hwmd_collection_detail
+    - node.type.journal_article
+  module:
+    - highwire_markup_display
+third_party_settings:
+  highwire_markup_display:
+    markup_display_id: collection_detail
+_core:
+  default_config_hash: OqMobUdF_Xr4xCKP1UBgwZixvb1c55hbR72X9vUwInw
+id: node.journal_article.hwmd_collection_detail
+field_name: hwmd_collection_detail
+entity_type: node
+bundle: journal_article
+label: 'HighWire Markup Display - Collection Detail'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: HWMarkupDisplay

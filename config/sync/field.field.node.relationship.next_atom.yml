@@ -1,0 +1,21 @@
+uuid: 3229ec46-f08b-49d3-bbc2-e050395d8e03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.next_atom
+    - node.type.relationship
+id: node.relationship.next_atom
+field_name: next_atom
+entity_type: node
+bundle: relationship
+label: next-atom
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: e7886a8a-2fac-4d6c-972c-209fce65e19c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.doi
+field_name: doi
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

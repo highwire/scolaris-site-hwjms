@@ -1,0 +1,19 @@
+uuid: dbf3f906-5e1f-468a-a8cb-251c8afedfcf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.journal_pissn
+field_name: journal_pissn
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: true

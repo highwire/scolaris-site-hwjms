@@ -1,0 +1,21 @@
+uuid: 9eadd7fa-d59d-4b18-993d-40ad799655a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.prev_atom
+    - node.type.relationship
+id: node.relationship.prev_atom
+field_name: prev_atom
+entity_type: node
+bundle: relationship
+label: prev-atom
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

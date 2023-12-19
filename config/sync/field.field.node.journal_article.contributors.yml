@@ -1,0 +1,22 @@
+uuid: 1cb95710-2081-4c69-8d8f-c6d3af10c3d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.contributors
+    - node.type.journal_article
+  module:
+    - text
+id: node.journal_article.contributors
+field_name: contributors
+entity_type: node
+bundle: journal_article
+label: contributors
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

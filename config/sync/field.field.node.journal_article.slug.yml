@@ -1,0 +1,22 @@
+uuid: 503ab36a-de77-45b6-a175-097f7ad9a981
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.slug
+    - node.type.journal_article
+  module:
+    - text
+id: node.journal_article.slug
+field_name: slug
+entity_type: node
+bundle: journal_article
+label: slug
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
