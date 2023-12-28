@@ -1,0 +1,32 @@
+uuid: c5c95110-0ea7-4be4-ad2b-02c4a6a4ee3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+_core:
+  default_config_hash: FWtMs0Oh2xy7XJehl29aQUNeyvHrliQZluPiGXZSKvw
+id: eletter_moderator
+label: 'eletter moderator'
+weight: 3
+is_admin: null
+permissions:
+  - 'create field_electronic_publication_dat'
+  - 'create field_highwire_comment_response'
+  - 'create field_workflow_state'
+  - 'edit field_electronic_publication_dat'
+  - 'edit field_highwire_comment_response'
+  - 'edit field_highwire_comment_subject'
+  - 'edit field_workflow_state'
+  - 'edit own field_electronic_publication_dat'
+  - 'edit own field_highwire_comment_response'
+  - 'edit own field_highwire_comment_subject'
+  - 'edit own field_workflow_state'
+  - 'view field_electronic_publication_dat'
+  - 'view field_highwire_comment_response'
+  - 'view field_highwire_comment_subject'
+  - 'view field_workflow_state'
+  - 'view own field_electronic_publication_dat'
+  - 'view own field_highwire_comment_response'
+  - 'view own field_highwire_comment_subject'
+  - 'view own field_workflow_state'

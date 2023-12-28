@@ -1,4 +1,4 @@
-uuid: d5fe8aca-88ed-4c29-a618-35e5e9188174
+uuid: e2eaca82-abee-4ee3-846b-2eb03c63303d
 langcode: en
 status: true
 dependencies:
@@ -22,6 +22,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'create eletters content'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
