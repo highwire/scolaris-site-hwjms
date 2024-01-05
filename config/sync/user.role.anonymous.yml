@@ -1,4 +1,4 @@
-uuid: d04dfc6d-50d7-4d82-a8f5-db5a2db3e075
+uuid: 8fc84cd9-f18c-4aed-a333-2bd04cb3e5eb
 langcode: en
 status: true
 dependencies:
@@ -20,5 +20,16 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'create eletters content'
+  - 'create field_highwire_comment_response'
+  - 'create field_highwire_comment_subject'
+  - 'edit field_highwire_comment_response'
+  - 'edit field_highwire_comment_subject'
+  - 'edit own field_highwire_comment_response'
+  - 'edit own field_highwire_comment_subject'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view field_highwire_comment_response'
+  - 'view field_highwire_comment_subject'
+  - 'view own field_highwire_comment_response'
+  - 'view own field_highwire_comment_subject'
