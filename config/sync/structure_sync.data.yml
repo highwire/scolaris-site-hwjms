@@ -135,7 +135,7 @@ menus:
     menu_name: main
     title: 'About us'
     parent: null
-    uri: 'internal:/about'
+    uri: 'internal:/about-us'
     link_title: ''
     description: null
     enabled: true
@@ -147,36 +147,36 @@ menus:
     menu_name: main
     title: Members
     parent: 'menu_link_content:3c824e60-1612-4dc1-8118-caf24e982ff1'
-    uri: 'entity:node/122'
-    link_title: null
+    uri: 'internal:/members'
+    link_title: ''
     description: null
     enabled: true
     expanded: false
-    weight: 0
+    weight: -50
     langcode: en
     uuid: 84377d35-4118-4605-971a-d0d82db0ae44
   -
     menu_name: main
     title: Institutions
     parent: 'menu_link_content:3c824e60-1612-4dc1-8118-caf24e982ff1'
-    uri: 'entity:node/123'
-    link_title: null
+    uri: 'internal:/institutions'
+    link_title: ''
     description: null
     enabled: true
     expanded: false
-    weight: 0
+    weight: -48
     langcode: en
     uuid: f6e4eef2-4e39-4f5d-b9eb-619a34dbf773
   -
     menu_name: main
     title: Authors
     parent: 'menu_link_content:3c824e60-1612-4dc1-8118-caf24e982ff1'
-    uri: 'entity:node/124'
-    link_title: null
+    uri: 'internal:/authors'
+    link_title: ''
     description: null
     enabled: true
     expanded: false
-    weight: 0
+    weight: -49
     langcode: en
     uuid: c91decb9-796d-4d43-9b3e-93c29bb86de7
   -
@@ -191,6 +191,18 @@ menus:
     weight: 0
     langcode: en
     uuid: c20357b9-20ab-4411-bbd2-07b28d84d077
+  -
+    menu_name: main
+    title: Advertisers
+    parent: 'menu_link_content:3c824e60-1612-4dc1-8118-caf24e982ff1'
+    uri: 'internal:/advertise-us'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -47
+    langcode: en
+    uuid: 1f374937-1a8d-4d61-938b-ab4188ce5aab
   -
     menu_name: legal
     title: 'Privacy policy'
@@ -243,7 +255,7 @@ menus:
     menu_name: resources
     title: 'About us'
     parent: null
-    uri: 'internal:#'
+    uri: 'internal:/about-us'
     link_title: ''
     description: null
     enabled: true
@@ -255,7 +267,7 @@ menus:
     menu_name: resources
     title: FAQs
     parent: null
-    uri: 'internal:#'
+    uri: 'internal:/FAQs'
     link_title: ''
     description: null
     enabled: true
@@ -267,7 +279,7 @@ menus:
     menu_name: resources
     title: Permissions
     parent: null
-    uri: 'internal:#'
+    uri: 'internal:/permissions'
     link_title: ''
     description: null
     enabled: true
@@ -315,7 +327,7 @@ menus:
     menu_name: information
     title: Advertisers
     parent: null
-    uri: 'internal:#'
+    uri: 'internal:/advertise-us'
     link_title: ''
     description: null
     enabled: true
