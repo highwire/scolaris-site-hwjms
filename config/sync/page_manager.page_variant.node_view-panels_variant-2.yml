@@ -6,6 +6,7 @@ dependencies:
     - page_manager.page.node_view
   module:
     - ctools
+    - highwire_top_topics
     - jnl_search
     - journal_article_detail
     - node
@@ -72,6 +73,24 @@ variant_settings:
       more_link_label: 'See more'
       more_link_url: ''
       msg_no_data: 'No Altmetric data available.'
+    64dbffeb-2482-4a25-990d-5897c8665854:
+      id: most_read_cited_topics
+      label: 'Most Read, Cited, Topics'
+      label_display: visible
+      provider: highwire_top_topics
+      context_mapping: {  }
+      region: right
+      weight: 0
+      uuid: 64dbffeb-2482-4a25-990d-5897c8665854
+      top_topics: 1
+      top_topics_title: ''
+      most_read: 1
+      most_read_title: ''
+      most_cited: 1
+      most_cited_title: ''
+      limit: '5'
+      corpus: ''
+      read_more: 1
   page_title: '[node:title]'
   layout: bs_2col_stacked
   layout_settings:
