@@ -8,7 +8,7 @@ thanks_msg_display: 1
 email_article_note_display: 1
 message_subject_display: 1
 message_body_display: 1
-highwire_rr_email_sender: "<p>Dear !article_author_firstname_lastname,</p>\r\n\r\n    <p>An eLetter has been published on [node:field-highwire-c-response-to:field-highwire-a-journal:title]'s web site. To view it, navigate to your article and click on \"eLetter\" tab or click the link below. </p>\r\n\r\n    <p>eLetter: \"[node:title]\"</p>\r\n\r\n    <p>eLetter URL: [node:field-highwire-c-response-to:url:absolute] </p>\r\n\r\n    <p>Sincerely,</p>\r\n    <p>The Editorial Staff of [node:field-highwire-c-response-to:field-highwire-a-journal:title]</p>"
+highwire_rr_email_sender: no-reply@highwirepress.com
 highwire_rr_email_response_sent: "<p>Thank you for your submission. Below is a copy of your eLetter as we received it. Your eLetter, if accepted, should be\r\n    viewable within a few days.</p>\r\n\r\n    <p>Sincerely,<br />\r\n    The Editorial staff of !journal_name</p>\r\n    ----------------------------------------\r\n    <p>!article_link</p>\r\n    <p>The eLetter <em>!eletter_title</em> was submitted on !submitted_date:</p>\r\n    <p>!eletter_text</p>"
 highwire_rr_email_subject: 'Thank you for your response to'
 highwire_e_letter_submission_message: 'Thank you for your response. We intend to publish as rapidly as possible all responses that contribute substantially to the topic under discussion.'
