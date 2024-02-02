@@ -1,0 +1,12 @@
+uuid: 871c2f8d-b7ce-4c44-8d83-54c08af14ce4
+langcode: en
+status: true
+dependencies: {  }
+id: response
+label: Response
+description: ''
+use_admin_theme: false
+path: '/content/{corpus}/eletter_articles'
+access_logic: and
+access_conditions: {  }
+parameters: {  }
