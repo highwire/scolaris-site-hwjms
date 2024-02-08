@@ -1,0 +1,26 @@
+uuid: d6310b68-6ed1-40b5-be47-ea7fc593d946
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: hILegqxs-AaC9UUipX0sgEp79a6L8RNfV8R16yRVm-w
+id: node.field_corpus_info
+field_name: field_corpus_info
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

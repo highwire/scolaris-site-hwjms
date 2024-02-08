@@ -6,6 +6,8 @@ dependencies:
     - field.field.node.eletters.body
     - field.field.node.eletters.field_attachments
     - field.field.node.eletters.field_contributors
+    - field.field.node.eletters.field_corpus_info
+    - field.field.node.eletters.field_electronic_publication
     - field.field.node.eletters.field_electronic_publication_dat
     - field.field.node.eletters.field_highwire_comment_response
     - field.field.node.eletters.field_highwire_comment_subject
@@ -27,66 +29,62 @@ third_party_settings:
       children:
         - title
         - body
+      label: 'COMPOSE RESPONSE'
+      region: content
       parent_name: ''
       weight: 0
       format_type: tab
       format_settings:
-        label: 'COMPOSE RESPONSE'
+        classes: ''
+        id: ''
         formatter: open
         description: ''
         required_fields: true
-        id: ''
-        classes: ''
-      label: 'COMPOSE RESPONSE'
-      region: content
     group_references:
       children:
         - field_references
+      label: REFERENCES
+      region: content
       parent_name: ''
       weight: 1
       format_type: tab
       format_settings:
-        label: REFERENCES
+        classes: ''
+        id: ''
         formatter: open
         description: ''
         required_fields: true
-        id: ''
-        classes: ''
-      label: REFERENCES
-      region: content
     group_author_information:
       children:
         - field_contributors
+      label: 'AUTHOR INFORMATION'
+      region: content
       parent_name: ''
       weight: 2
       format_type: tab
       format_settings:
-        label: 'AUTHOR INFORMATION'
+        classes: ''
+        id: ''
         formatter: open
         description: ''
         required_fields: true
-        id: ''
-        classes: ''
-      label: 'AUTHOR INFORMATION'
-      region: content
     group_statement_of_competing_int:
       children:
         - field_no_competing_interests
         - field_please_describe_the_compet
+      label: 'STATEMENT OF COMPETING INTERESTS'
+      region: content
       parent_name: ''
       weight: 3
       format_type: tab
       format_settings:
-        label: 'STATEMENT OF COMPETING INTERESTS'
+        classes: ''
+        id: ''
         formatter: open
         description: ''
         required_fields: true
-        id: ''
-        classes: ''
-      label: 'STATEMENT OF COMPETING INTERESTS'
-      region: content
 _core:
-  default_config_hash: U4R-26KEkyeCYKjcLvhonjo5tL5f_OnLWrLcHrEj0l8
+  default_config_hash: gO1Mp7iJ_yEyOPCbzVf9KbadQ0kCd86v6bGQhIw90ao
 id: node.eletters.default
 targetEntityType: node
 bundle: eletters
@@ -95,16 +93,17 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 5
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   field_contributors:
     type: paragraphs
     weight: 13
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -119,61 +118,66 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
-  field_electronic_publication_dat:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: daterange_default
-    region: content
-  field_highwire_comment_response:
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_highwire_comment_subject:
-    weight: 6
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_no_competing_interests:
-    weight: 18
-    settings: {  }
-    third_party_settings: {  }
+  field_electronic_publication:
     type: options_buttons
+    weight: 4
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_electronic_publication_dat:
+    type: daterange_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_highwire_comment_response:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_highwire_comment_subject:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_no_competing_interests:
+    type: options_buttons
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_please_describe_the_compet:
+    type: string_textarea
     weight: 19
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_references:
+    type: string_textfield
     weight: 21
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_workflow_state:
-    weight: 7
+    type: options_select
+    weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   title:
     type: string_textfield
     weight: 4
@@ -185,6 +189,7 @@ content:
 hidden:
   created: true
   field_attachments: true
+  field_corpus_info: true
   field_highwire_comment_subject_a: true
   field_print_publication_date: true
   langcode: true

@@ -1,0 +1,26 @@
+uuid: 248cf3b1-0ed9-4bce-9ff5-ba63bea7aab7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_corpus_info
+    - filter.format.plain_text
+    - node.type.eletters
+  module:
+    - text
+_core:
+  default_config_hash: bBeyx0a8q6Ox-7-E7yskwuRAqZ2Ut0AXp0hAyoAjv_c
+id: node.eletters.field_corpus_info
+field_name: field_corpus_info
+entity_type: node
+bundle: eletters
+label: 'Corpus info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

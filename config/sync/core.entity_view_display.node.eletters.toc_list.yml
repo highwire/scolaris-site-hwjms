@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.eletters.body
     - field.field.node.eletters.field_attachments
     - field.field.node.eletters.field_contributors
+    - field.field.node.eletters.field_corpus_info
+    - field.field.node.eletters.field_electronic_publication
     - field.field.node.eletters.field_electronic_publication_dat
     - field.field.node.eletters.field_highwire_comment_response
     - field.field.node.eletters.field_highwire_comment_subject
@@ -27,121 +29,123 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
-  default_config_hash: PzCYhwjG_30jtTSdXwyaYNrCHpEo-0JsUZExYXl4v04
+  default_config_hash: hmhTbQqQDxGohZvnZLTHTpGap1MnbVOiFzvRNsng2_Q
 id: node.eletters.toc_list
 targetEntityType: node
 bundle: eletters
 mode: toc_list
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 101
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 101
     region: content
   field_attachments:
-    weight: 111
+    type: file_default
     label: above
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    type: file_default
+    weight: 111
     region: content
   field_contributors:
     type: entity_reference_revisions_entity_view
-    weight: 102
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 102
     region: content
   field_electronic_publication_dat:
-    weight: 103
+    type: daterange_default
     label: above
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
+      format_type: medium
+      separator: '-'
     third_party_settings: {  }
-    type: daterange_default
+    weight: 103
     region: content
   field_highwire_comment_response:
-    weight: 104
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 104
     region: content
   field_highwire_comment_subject:
-    weight: 105
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 105
     region: content
   field_highwire_comment_subject_a:
-    weight: 106
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 106
     region: content
   field_no_competing_interests:
-    weight: 107
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 107
     region: content
   field_please_describe_the_compet:
-    weight: 108
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 108
     region: content
   field_print_publication_date:
-    weight: 109
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 109
     region: content
   field_references:
-    weight: 110
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 110
     region: content
   field_workflow_state:
-    weight: 112
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 112
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   addtoany: true
   ccc_permissions_link: true
+  field_corpus_info: true
+  field_electronic_publication: true
   hwjma_focus_view: true
   hwjma_toc_pager: true
   jnl_focus_view: true
