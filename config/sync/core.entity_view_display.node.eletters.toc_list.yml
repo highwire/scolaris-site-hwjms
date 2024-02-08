@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.eletters.field_attachments
     - field.field.node.eletters.field_contributors
     - field.field.node.eletters.field_corpus_info
+    - field.field.node.eletters.field_electronic_publication
     - field.field.node.eletters.field_electronic_publication_dat
     - field.field.node.eletters.field_highwire_comment_response
     - field.field.node.eletters.field_highwire_comment_subject
@@ -144,6 +145,7 @@ hidden:
   addtoany: true
   ccc_permissions_link: true
   field_corpus_info: true
+  field_electronic_publication: true
   hwjma_focus_view: true
   hwjma_toc_pager: true
   jnl_focus_view: true

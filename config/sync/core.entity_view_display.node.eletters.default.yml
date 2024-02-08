@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.eletters.field_attachments
     - field.field.node.eletters.field_contributors
     - field.field.node.eletters.field_corpus_info
+    - field.field.node.eletters.field_electronic_publication
     - field.field.node.eletters.field_electronic_publication_dat
     - field.field.node.eletters.field_highwire_comment_response
     - field.field.node.eletters.field_highwire_comment_subject
@@ -54,6 +55,13 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_electronic_publication:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
     region: content
   field_electronic_publication_dat:
     type: daterange_default

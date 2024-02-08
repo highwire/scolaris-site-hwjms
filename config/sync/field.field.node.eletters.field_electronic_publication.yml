@@ -1,0 +1,21 @@
+uuid: cd132318-cf49-46ef-9de7-ef2caee64740
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_electronic_publication
+    - node.type.eletters
+  module:
+    - options
+id: node.eletters.field_electronic_publication
+field_name: field_electronic_publication
+entity_type: node
+bundle: eletters
+label: 'Electronic Publication Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

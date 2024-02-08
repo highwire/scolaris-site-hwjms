@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.eletters.field_attachments
     - field.field.node.eletters.field_contributors
     - field.field.node.eletters.field_corpus_info
+    - field.field.node.eletters.field_electronic_publication
     - field.field.node.eletters.field_electronic_publication_dat
     - field.field.node.eletters.field_highwire_comment_response
     - field.field.node.eletters.field_highwire_comment_subject
@@ -117,15 +118,21 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+  field_electronic_publication:
+    type: options_buttons
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_electronic_publication_dat:
     type: daterange_default
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_highwire_comment_response:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -135,7 +142,7 @@ content:
     third_party_settings: {  }
   field_highwire_comment_subject:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -167,7 +174,7 @@ content:
     third_party_settings: {  }
   field_workflow_state:
     type: options_select
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
