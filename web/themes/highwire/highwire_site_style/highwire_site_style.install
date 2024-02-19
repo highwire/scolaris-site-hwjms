@@ -22,7 +22,7 @@ function highwire_site_style_update_9001(){
  *
  * Perform actions to update values to TrendMD module.
  */
-function highwire_site_style_update_9003(){
+function highwire_site_style_update_9002(){
   /* For trendmd */
   $trendmd_enable = \Drupal::service('module_installer')->install(['highwire_trendmd'], TRUE);
   if (!$trendmd_enable) {
@@ -35,7 +35,7 @@ function highwire_site_style_update_9003(){
  *
  * Perform actions to update values to Eletter module.
  */
-function highwire_site_style_update_9004(){
+function highwire_site_style_update_9003(){
   /* For Eletter module */
   $Eletter_enable = \Drupal::service('module_installer')->install(['highwire_eletter'], TRUE);
   if (!$Eletter_enable) {
@@ -48,7 +48,7 @@ function highwire_site_style_update_9004(){
  *
  * Perform actions to update values to Crazy Egg module.
  */
-function highwire_site_style_update_9006()
+function highwire_site_style_update_9004()
 {
     /* For enable Crazy Egg Module */
     $crazy_egg_enable = \Drupal::service("module_installer")->install(["crazyegg"],true);
