@@ -1,7 +1,7 @@
 {
-    "name": "highwire/scolaris-site-hwjma",
+    "name": "highwire/scolaris-site-hwjms",
     "type": "project",
-    "description": "Scolaris hwjma site instance",
+    "description": "Scolaris hwjms site instance",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
