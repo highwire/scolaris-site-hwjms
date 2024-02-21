@@ -115,8 +115,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
 _core:
   default_config_hash: sXUklQXmgWa_ZiS3kiWtGmM7eKksifTLoUz-ShxfYpc
 id: node.journal_issue.issue_list_item
@@ -126,21 +126,21 @@ mode: issue_list_item
 content:
   date_ppub:
     type: daterange_default
+    weight: 1
+    region: content
     label: hidden
     settings:
       timezone_override: ''
       format_type: html_year
       separator: '-'
     third_party_settings: {  }
-    weight: 1
-    region: content
   issue:
     type: text_default
+    weight: 0
+    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   addtoany: true
   adjuncts: true

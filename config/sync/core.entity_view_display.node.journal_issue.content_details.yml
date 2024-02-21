@@ -118,29 +118,27 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
   field_group:
     group_action_tools:
       children:
         - hw_marker_sign_up
         - group_share_popup
         - hw_alerts_sign_up
-      label: 'Action Tools'
       parent_name: ''
-      region: content
       weight: 13
       format_type: highwire_html_list
       format_settings:
         id: ''
         classes: ''
         list_type: ul
+      label: 'Action Tools'
+      region: content
     group_share_popup:
       children:
         - addtoany
-      label: 'share popup'
       parent_name: group_action_tools
-      region: content
       weight: 4
       format_type: highwire_bootstrap_modal_popup
       format_settings:
@@ -161,6 +159,8 @@ third_party_settings:
         separate_toggle_button_settings:
           button_weight: ''
           button_parent: default
+      label: 'share popup'
+      region: content
 _core:
   default_config_hash: 9nK1S0L7PssNYLvd5ajp_Ka7g8s1gZVqvv4wWEyzhzI
 id: node.journal_issue.content_details
@@ -169,29 +169,31 @@ bundle: journal_issue
 mode: content_details
 content:
   addtoany:
-    settings: {  }
-    third_party_settings: {  }
     weight: 14
     region: content
+    settings: {  }
+    third_party_settings: {  }
   date_ppub:
     type: daterange_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-      separator: '-'
-    third_party_settings: {  }
     weight: 8
     region: content
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
   doi:
     type: text_default
+    weight: 11
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 11
-    region: content
   enclosures:
     type: access_aware_file_url_plain
+    weight: 12
+    region: content
     label: above
     settings:
       access_rules:
@@ -201,93 +203,91 @@ content:
       access_denied_html: 'Log-in to access free PDF or view purchase options'
       access_link_hide: false
     third_party_settings: {  }
-    weight: 12
-    region: content
   fpage:
     type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
     weight: 6
     region: content
-  hw_alerts_sign_up:
+    label: above
     settings: {  }
     third_party_settings: {  }
+  hw_alerts_sign_up:
     weight: 5
     region: content
-  hw_marker_sign_up:
     settings: {  }
     third_party_settings: {  }
+  hw_marker_sign_up:
     weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
   issue:
     type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
     weight: 5
     region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   issue_title:
     type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
     weight: 3
     region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   journal_eissn:
     type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
     weight: 9
     region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   journal_pissn:
     type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
     weight: 10
     region: content
-  lpage:
-    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
+  lpage:
+    type: text_default
     weight: 7
     region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   parent_journal:
     type: entity_reference_label
+    weight: 2
+    region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
-    region: content
   variant_cover_image:
     type: image
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: ''
-    third_party_settings: {  }
     weight: 1
     region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
   variant_cover_source_image:
     type: image
-    label: above
-    settings:
-      image_link: ''
-      image_style: ''
-    third_party_settings: {  }
     weight: 0
     region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
   volume:
     type: text_default
+    weight: 4
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
-    region: content
 hidden:
   adjuncts: true
   apath: true

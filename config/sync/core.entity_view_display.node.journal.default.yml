@@ -118,10 +118,10 @@ bundle: journal
 mode: default
 content:
   links:
-    settings: {  }
-    third_party_settings: {  }
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   about: true
   addtoany: true

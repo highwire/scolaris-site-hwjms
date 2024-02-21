@@ -1,15 +1,13 @@
-uuid: e2eaca82-abee-4ee3-846b-2eb03c63303d
+uuid: 82c336d9-7783-4fc4-bb4a-05e02bf80ce6
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.basic_html
-    - node.type.eletters
   module:
     - comment
     - contact
     - filter
-    - node
     - search
     - shortcut
     - system

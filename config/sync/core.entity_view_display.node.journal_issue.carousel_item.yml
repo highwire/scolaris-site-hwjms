@@ -114,8 +114,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
 _core:
   default_config_hash: se9W2v91AVj1QtJNW_0tn2irlbaJH88E6lL4sRkelzI
 id: node.journal_issue.carousel_item
@@ -125,13 +125,13 @@ mode: carousel_item
 content:
   variant_cover_image:
     type: image
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: ''
-    third_party_settings: {  }
     weight: 0
     region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
 hidden:
   addtoany: true
   adjuncts: true

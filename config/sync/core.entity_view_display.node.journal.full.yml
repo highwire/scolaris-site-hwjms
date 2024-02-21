@@ -115,25 +115,25 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
   field_group:
     group_search_within:
       children: {  }
-      label: 'search within'
       parent_name: ''
-      region: content
       weight: 0
       format_type: html_element
       format_settings:
-        classes: 'toc-head mainpane'
         id: ''
+        classes: 'toc-head mainpane'
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+      label: 'search within'
+      region: content
     group_journal_tabs:
       children:
         - group_latest_articles
@@ -142,9 +142,7 @@ third_party_settings:
         - group_about_this_periodical
         - group_editorial_board
         - group_most_read
-      label: 'Journal tabs'
       parent_name: ''
-      region: content
       weight: 1
       format_type: highwire_tabs
       format_settings:
@@ -154,12 +152,12 @@ third_party_settings:
         ajax_markup:
           ajax_markup_enabled: 1
           active_tab_ajax_enabled: 0
+      label: 'Journal tabs'
+      region: content
     group_latest_articles:
       children:
         - latest_articles
-      label: 'Latest Articles'
       parent_name: group_journal_tabs
-      region: content
       weight: 1
       format_type: highwire_tab
       format_settings:
@@ -168,12 +166,12 @@ third_party_settings:
         description: ''
         active: 1
         formatter: closed
+      label: 'Latest Articles'
+      region: content
     group_all_issues:
       children:
         - all_issues
-      label: Archive
       parent_name: group_journal_tabs
-      region: content
       weight: 2
       format_type: highwire_tab
       format_settings:
@@ -182,12 +180,12 @@ third_party_settings:
         id: issues
         classes: mainpanel
         active: 0
+      label: Archive
+      region: content
     group_submit_an_article:
       children:
         - submit_article
-      label: 'Submit an article'
       parent_name: group_journal_tabs
-      region: content
       weight: 3
       format_type: highwire_tab
       format_settings:
@@ -196,12 +194,12 @@ third_party_settings:
         description: ''
         active: 0
         formatter: closed
+      label: 'Submit an article'
+      region: content
     group_about_this_periodical:
       children:
         - about
-      label: 'About this periodical'
       parent_name: group_journal_tabs
-      region: content
       weight: 4
       format_type: highwire_tab
       format_settings:
@@ -210,12 +208,12 @@ third_party_settings:
         description: ''
         active: 0
         formatter: closed
+      label: 'About this periodical'
+      region: content
     group_editorial_board:
       children:
         - editorial_brd
-      label: 'Editorial Board'
       parent_name: group_journal_tabs
-      region: content
       weight: 5
       format_type: highwire_tab
       format_settings:
@@ -224,12 +222,12 @@ third_party_settings:
         description: ''
         active: 0
         formatter: closed
+      label: 'Editorial Board'
+      region: content
     group_most_read:
       children:
         - most_read
-      label: 'Most Read'
       parent_name: group_journal_tabs
-      region: content
       weight: 6
       format_type: highwire_tab
       format_settings:
@@ -238,6 +236,8 @@ third_party_settings:
         description: ''
         active: 0
         formatter: closed
+      label: 'Most Read'
+      region: content
 _core:
   default_config_hash: _dd8g1Hpnrdw15D-KQb3J8ORxyHAc982GOmPkk5wdCA
 id: node.journal.full
@@ -246,35 +246,35 @@ bundle: journal
 mode: full
 content:
   about:
-    settings: {  }
-    third_party_settings: {  }
     weight: 2
     region: content
-  all_issues:
     settings: {  }
     third_party_settings: {  }
+  all_issues:
     weight: 39
     region: content
-  editorial_brd:
     settings: {  }
     third_party_settings: {  }
+  editorial_brd:
     weight: 3
     region: content
-  latest_articles:
     settings: {  }
     third_party_settings: {  }
+  latest_articles:
     weight: 40
     region: content
-  most_read:
     settings: {  }
     third_party_settings: {  }
+  most_read:
     weight: 4
     region: content
-  submit_article:
     settings: {  }
     third_party_settings: {  }
+  submit_article:
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   addtoany: true
   adjuncts: true
@@ -361,10 +361,6 @@ hidden:
   next_atom: true
   overline: true
   page_count: true
-  pap_alias: true
-  pap_article_view: true
-  pap_landing_page_text: true
-  pap_page_link: true
   parent: true
   parent_issue: true
   parent_journal: true

@@ -114,8 +114,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
 _core:
   default_config_hash: 6mKRW22M92ZZlZLJ1Norfq_y8172q9ScW_n_hvAtLEo
 id: node.journal.search_result
@@ -124,10 +124,10 @@ bundle: journal
 mode: search_result
 content:
   links:
-    settings: {  }
-    third_party_settings: {  }
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   about: true
   addtoany: true
@@ -218,10 +218,6 @@ hidden:
   next_atom: true
   overline: true
   page_count: true
-  pap_alias: true
-  pap_article_view: true
-  pap_landing_page_text: true
-  pap_page_link: true
   parent: true
   parent_issue: true
   parent_journal: true

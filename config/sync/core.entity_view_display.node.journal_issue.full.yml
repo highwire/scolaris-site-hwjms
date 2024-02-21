@@ -115,28 +115,28 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
   field_group:
     group_articles_in_this_issue:
       children:
         - hwmd_table_of_contents_journals_
         - prevnext_toc_pager
-      label: 'Table of Contents'
       parent_name: ''
-      region: content
       weight: 0
       format_type: html_element
       format_settings:
         label: 'Table of Contents'
-        classes: ''
-        id: ''
         element: div
         show_label: true
         label_element: h2
         attributes: 'class="tab-content__main-heading latest-articles"'
         effect: none
         speed: fast
+        id: ''
+        classes: ''
+      label: 'Table of Contents'
+      region: content
 _core:
   default_config_hash: Sn780xusG5J5MmJJzjYtuaELuvYqsmN4jt36OjrUT24
 id: node.journal_issue.full
@@ -146,16 +146,16 @@ mode: full
 content:
   hwmd_table_of_contents_journals_:
     type: hwmarkup_display_formatter
+    weight: 0
+    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
   prevnext_toc_pager:
-    settings: {  }
-    third_party_settings: {  }
     weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   addtoany: true
   adjuncts: true

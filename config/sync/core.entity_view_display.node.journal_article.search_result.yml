@@ -128,26 +128,26 @@ bundle: journal_article
 mode: search_result
 content:
   links:
-    settings: {  }
-    third_party_settings: {  }
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
   title_plain:
     type: text_default
+    weight: 1
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 1
-    region: content
   variant_cover_image:
     type: image
-    label: above
-    settings:
-      image_link: ''
-      image_style: ''
-    third_party_settings: {  }
     weight: 2
     region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
 hidden:
   addtoany: true
   adjuncts: true

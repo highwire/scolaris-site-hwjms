@@ -116,8 +116,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
 _core:
   default_config_hash: Bpm1sS_O3K3zxMsZ0x8nYX6f2KLwO3TYhXSNjHstEak
 id: node.journal_issue.archive_issue_list
@@ -127,30 +127,30 @@ mode: archive_issue_list
 content:
   date_ppub:
     type: daterange_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-      separator: '-'
-    third_party_settings: {  }
     weight: 2
     region: content
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
   issue:
     type: text_default
+    weight: 1
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 1
-    region: content
   variant_cover_image:
     type: image
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: ''
-    third_party_settings: {  }
     weight: 0
     region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
 hidden:
   addtoany: true
   adjuncts: true

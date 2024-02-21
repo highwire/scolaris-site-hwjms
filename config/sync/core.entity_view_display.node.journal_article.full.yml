@@ -126,47 +126,45 @@ third_party_settings:
       children:
         - group_content_actions
         - group_article_tabs
-      label: Outer
       parent_name: ''
-      region: content
       weight: 0
       format_type: html_element
       format_settings:
-        classes: journal-article__tabwrap
         id: ''
+        classes: journal-article__tabwrap
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+      label: Outer
+      region: content
     group_content_actions:
       children:
         - jnl_focus_view
         - prevnext_toc_pager
-      label: 'Content actions'
       parent_name: group_outer
-      region: content
       weight: 114
       format_type: html_element
       format_settings:
-        classes: 'journals-step top'
         id: ''
+        classes: 'journals-step top'
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+      label: 'Content actions'
+      region: content
     group_article_tabs:
       children:
         - group_article
         - group_figures_tables
         - group_metrics
         - group_response
-      label: 'Article Tabs'
       parent_name: group_outer
-      region: content
       weight: 115
       format_type: highwire_tabs
       format_settings:
@@ -176,13 +174,13 @@ third_party_settings:
         ajax_markup:
           ajax_markup_enabled: 1
           active_tab_ajax_enabled: 0
+      label: 'Article Tabs'
+      region: content
     group_article:
       children:
         - group_abstract
         - hwmd_long_article_
-      label: Article
       parent_name: group_article_tabs
-      region: content
       weight: 116
       format_type: highwire_tab
       format_settings:
@@ -191,29 +189,29 @@ third_party_settings:
         description: ''
         active: 1
         formatter: closed
+      label: Article
+      region: content
     group_abstract:
       children:
         - hwmd_abstract_article_
-      label: Abstract
       parent_name: group_article
-      region: content
       weight: 1
       format_type: html_element
       format_settings:
-        classes: abstract-wrapper
         id: abstract
+        classes: abstract-wrapper
         element: div
         show_label: false
         label_element: h3
         attributes: 'class="section-title"'
         effect: none
         speed: fast
+      label: Abstract
+      region: content
     group_figures_tables:
       children:
         - hwmd_figures_tables_article_
-      label: 'Figures & Tables'
       parent_name: group_article_tabs
-      region: content
       weight: 117
       format_type: highwire_tab
       format_settings:
@@ -222,14 +220,14 @@ third_party_settings:
         description: ''
         active: 1
         formatter: closed
+      label: 'Figures & Tables'
+      region: content
     group_metrics:
       children:
         - jnl_info_metrics_tab
         - jnl_altmetrics
         - jnl_usage_stats
-      label: Metrics
       parent_name: group_article_tabs
-      region: content
       weight: 118
       format_type: highwire_tab
       format_settings:
@@ -238,12 +236,12 @@ third_party_settings:
         description: ''
         active: 0
         formatter: closed
+      label: Metrics
+      region: content
     group_response:
       children:
         - article_response_tab
-      label: Response
       parent_name: group_article_tabs
-      region: content
       weight: 119
       format_type: highwire_tab
       format_settings:
@@ -251,6 +249,8 @@ third_party_settings:
         classes: ''
         formatter: closed
         description: ''
+      label: Response
+      region: content
 _core:
   default_config_hash: XpbM3qiRCgehTXqnCKQjlmWC2z-c6UgGHmExcJxt1RI
 id: node.journal_article.full
@@ -259,56 +259,56 @@ bundle: journal_article
 mode: full
 content:
   article_response_tab:
-    settings: {  }
-    third_party_settings: {  }
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
   hwmd_abstract_article_:
     type: hwmarkup_display_formatter
+    weight: 2
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 2
-    region: content
   hwmd_figures_tables_article_:
     type: hwmarkup_display_formatter
+    weight: 0
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
   hwmd_long_article_:
     type: hwmarkup_display_formatter
+    weight: 2
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 2
-    region: content
   jnl_altmetrics:
-    settings: {  }
-    third_party_settings: {  }
     weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
   jnl_focus_view:
-    settings: {  }
-    third_party_settings: {  }
     weight: 1
     region: content
-  jnl_info_metrics_tab:
     settings: {  }
     third_party_settings: {  }
+  jnl_info_metrics_tab:
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
   jnl_usage_stats:
-    settings: {  }
-    third_party_settings: {  }
     weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
   prevnext_toc_pager:
-    settings: {  }
-    third_party_settings: {  }
     weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   addtoany: true
   adjuncts: true

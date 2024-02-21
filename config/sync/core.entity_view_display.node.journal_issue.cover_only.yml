@@ -114,8 +114,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
 _core:
   default_config_hash: LOHMHBRJSht3PxyfkCa28kkz13Cl2JEm2IlYiPPJbh0
 id: node.journal_issue.cover_only
@@ -125,22 +125,22 @@ mode: cover_only
 content:
   variant_cover_image:
     type: image
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: ''
-    third_party_settings: {  }
     weight: 1
     region: content
-  variant_cover_source_image:
-    type: image
     label: hidden
     settings:
-      image_link: ''
       image_style: ''
+      image_link: ''
     third_party_settings: {  }
+  variant_cover_source_image:
+    type: image
     weight: 0
     region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
 hidden:
   addtoany: true
   adjuncts: true

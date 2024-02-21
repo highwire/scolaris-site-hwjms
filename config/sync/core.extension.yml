@@ -50,7 +50,6 @@ module:
   highwire_markup: 0
   highwire_markup_display: 0
   highwire_metatag: 0
-  highwire_monsido: 0
   highwire_openurl: 0
   highwire_pap: 0
   highwire_personalization: 0
@@ -108,7 +107,6 @@ module:
   views_bulk_operations: 0
   views_ui: 0
   pathauto: 1
-  externalauth: 10
   views: 10
   paragraphs: 11
   freebird: 1000

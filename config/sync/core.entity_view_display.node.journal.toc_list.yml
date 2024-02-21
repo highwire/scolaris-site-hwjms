@@ -114,8 +114,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
 _core:
   default_config_hash: _PKBl33AK0Mq14GokAZIiLORNcXuNqaNZT_swMVjfbU
 id: node.journal.toc_list
@@ -124,9 +124,9 @@ bundle: journal
 mode: toc_list
 content:
   links:
+    weight: 100
     settings: {  }
     third_party_settings: {  }
-    weight: 100
     region: content
 hidden:
   about: true
@@ -218,10 +218,6 @@ hidden:
   next_atom: true
   overline: true
   page_count: true
-  pap_alias: true
-  pap_article_view: true
-  pap_landing_page_text: true
-  pap_page_link: true
   parent: true
   parent_issue: true
   parent_journal: true

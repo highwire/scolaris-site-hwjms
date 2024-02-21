@@ -114,8 +114,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
 _core:
   default_config_hash: UtJMDvrisTGr89wi4zGwBXX3rPivWpUFi0oDzYIA96Y
 id: node.journal.header_published_ahead_of_print
@@ -124,20 +124,20 @@ bundle: journal
 mode: header_published_ahead_of_print
 content:
   pap_alias:
-    settings: {  }
-    third_party_settings: {  }
     weight: 0
     region: content
-  pap_article_view:
     settings: {  }
     third_party_settings: {  }
+  pap_article_view:
     weight: 2
     region: content
-  pap_landing_page_text:
     settings: {  }
     third_party_settings: {  }
+  pap_landing_page_text:
     weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   about: true
   addtoany: true

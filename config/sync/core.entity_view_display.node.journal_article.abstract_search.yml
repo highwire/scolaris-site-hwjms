@@ -122,8 +122,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
 _core:
   default_config_hash: khLXtlGNt8Qt8KILnQTTiREo2MrmQT5zgnqCD3MI2gk
 id: node.journal_article.abstract_search
@@ -133,11 +133,11 @@ mode: abstract_search
 content:
   hwmd_abstract_search:
     type: hwmarkup_display_formatter
+    weight: 0
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   addtoany: true
   adjuncts: true

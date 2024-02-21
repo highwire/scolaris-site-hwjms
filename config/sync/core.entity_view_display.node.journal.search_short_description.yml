@@ -115,8 +115,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
 _core:
   default_config_hash: lEetvE4WhgqL8K98VQBz9qpIgm7CKloaZmgieh5Tdtk
 id: node.journal.search_short_description
@@ -126,11 +126,11 @@ mode: search_short_description
 content:
   hwmd_abstract_search_index_:
     type: hwmarkup_display_formatter
+    weight: 0
+    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   about: true
   addtoany: true
@@ -221,10 +221,6 @@ hidden:
   next_atom: true
   overline: true
   page_count: true
-  pap_alias: true
-  pap_article_view: true
-  pap_landing_page_text: true
-  pap_page_link: true
   parent: true
   parent_issue: true
   parent_journal: true

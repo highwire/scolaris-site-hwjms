@@ -122,8 +122,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
 _core:
   default_config_hash: EDzNN1lBvAAk7QEEZZriy8vqx2iS4XhGpKBslPZC94o
 id: node.journal_article.collection_detail_short_desc
@@ -133,11 +133,11 @@ mode: collection_detail_short_desc
 content:
   hwmd_collection_detail:
     type: hwmarkup_display_formatter
+    weight: 0
+    region: content
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   addtoany: true
   adjuncts: true

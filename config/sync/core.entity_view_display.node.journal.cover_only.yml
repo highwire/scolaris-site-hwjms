@@ -115,8 +115,8 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
     allow_custom: false
+    enabled: false
 _core:
   default_config_hash: 7eUgUgT7vt-1JTYOJEwgBPG5i8-xWR1_gxfYHf0DTS8
 id: node.journal.cover_only
@@ -126,22 +126,22 @@ mode: cover_only
 content:
   variant_cover_image:
     type: image
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: ''
-    third_party_settings: {  }
     weight: 1
     region: content
-  variant_cover_source_image:
-    type: image
     label: hidden
     settings:
-      image_link: ''
       image_style: ''
+      image_link: ''
     third_party_settings: {  }
+  variant_cover_source_image:
+    type: image
     weight: 0
     region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
 hidden:
   about: true
   addtoany: true
@@ -233,10 +233,6 @@ hidden:
   next_atom: true
   overline: true
   page_count: true
-  pap_alias: true
-  pap_article_view: true
-  pap_landing_page_text: true
-  pap_page_link: true
   parent: true
   parent_issue: true
   parent_journal: true

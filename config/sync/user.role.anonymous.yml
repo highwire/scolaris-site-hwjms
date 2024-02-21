@@ -1,16 +1,13 @@
-uuid: 8fc84cd9-f18c-4aed-a333-2bd04cb3e5eb
+uuid: 06292e8d-7e20-4b8b-a4a2-80cc47c9c409
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.restricted_html
-    - node.type.eletters
   module:
     - comment
     - contact
-    - field_permissions
     - filter
-    - node
     - search
     - system
 _core:
