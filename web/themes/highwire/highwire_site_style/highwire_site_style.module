@@ -4,3 +4,11 @@
  *
  * Perform actions for defaults hooks .
  */
+
+
+/**
+ * Implements hook_page_attachments().
+ */
+function highwire_site_style_page_attachments(&$variables) {
+  $variables['#attached']['library'][] = 'highwire_site_style/theme_override';
+}

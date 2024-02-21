@@ -1,0 +1,5 @@
+theme_override:
+  version: 1.x
+  css:
+    theme:
+      css/custom-styles.css: {}
